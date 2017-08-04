@@ -750,12 +750,15 @@
 // @section machine
 
 // Travel limits after homing (units are in mm)
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
-#define Z_MIN_POS 0
-#define X_MAX_POS 190
-#define Y_MAX_POS 190
-#define Z_MAX_POS 190
+// PABLO. Pongo límites mínimos en X e Y para que no se choque con los clips. Pueden volverse a 0 
+//  si se mueven los finales de carrera de X e Y de forma tal que los clips no molesten nunca más.
+#define X_MIN_POS 15
+#define Y_MIN_POS 15
+#define Z_MIN_POS  0
+// Los máximos son 21cm de la cama - 1,5 de los clips, por seguridad
+#define X_MAX_POS 195
+#define Y_MAX_POS 195
+#define Z_MAX_POS 195
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
 #define MIN_SOFTWARE_ENDSTOPS
