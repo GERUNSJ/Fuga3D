@@ -502,6 +502,12 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
+ 
+ /* http://www.prusaprinters.org/calculator/
+  EJE Z
+    Nuestras varillas roscadas tienen un paso (pitch) de 1,25 mm/vuelta,
+    avanzan 10 mm cada 8 vueltas. Varillas M8.
+ */
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 2560, 918 }
 
 /**
