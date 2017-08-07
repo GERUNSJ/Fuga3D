@@ -1,11 +1,14 @@
 /*
 	Este es el archivo de configuración de la Fuga 3D, para Marlin 1.1.x
 	
-	El espacio de impresión está en 19*19*19 para evitar problemas con los
-	broches que tienen el vidrio.
+	El espacio de impresión está en 175*175*140 para evitar problemas con los
+	broches que tienen el vidrio y por seguridad. Ver MANUAL_X_HOME_POS y 
+  X_MAX_POS. Los 175 comienzan dentro de la cama: el (0,0,0) lógico está
+  en (15,15,0) físico.
 	
 	
-	
+	07/08/2017 - Pablo Aguado
+      Ajuste límites de impresión a 175x175x140 desfasados (15,15,0)
 	30/06/2017 - Sergio Montañez, Pablo Aguado
 	    Primera configuración.
 	
@@ -92,7 +95,7 @@
 // build by the user have been successfully uploaded into firmware.
 #define STRING_CONFIG_H_AUTHOR "(02_06_17, Pablo A, Sergio M)" // Who made the changes.
 #define SHOW_BOOTSCREEN
-#define STRING_SPLASH_LINE1 "02_06_17"// will be shown during bootup in line 1
+#define STRING_SPLASH_LINE1 "Repositorio en"// will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 "github.com/gerunsj"        // will be shown during bootup in line 2
 
 //
@@ -756,15 +759,15 @@
 // @section machine
 
 // Travel limits after homing (units are in mm)
-// PABLO. Pongo límites mínimos en X e Y para que no se choque con los clips. Pueden volverse a 0 
-//  si se mueven los finales de carrera de X e Y de forma tal que los clips no molesten nunca más.
-#define X_MIN_POS 15
-#define Y_MIN_POS 15
+// Estos son los limites lógicos suaves (soft limits) que la máquina debería respetar.
+#define X_MIN_POS  0
+#define Y_MIN_POS 0
 #define Z_MIN_POS  0
-// Los máximos son 21cm de la cama - 1,5 de los clips, por seguridad
-#define X_MAX_POS 195
-#define Y_MAX_POS 195
-#define Z_MAX_POS 195
+//  Estos se cuentan desde el origen lógico, que está desfasado del origen físico (los finales
+// de carrera) por MANUAL_?_HOME_POS
+#define X_MAX_POS 175
+#define Y_MAX_POS 175
+#define Z_MAX_POS 140
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
 #define MIN_SOFTWARE_ENDSTOPS
@@ -953,9 +956,13 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-//#define MANUAL_X_HOME_POS 0
-//#define MANUAL_Y_HOME_POS 0
-//#define MANUAL_Z_HOME_POS 0
+/*
+    Ahora cuando toca los finales de carrera está en la posición (-15,-15,0), lo que garantiza que
+    el (0,0,0) del espacio de impresión esté  más allá de los broches. 
+*/
+#define MANUAL_X_HOME_POS -15
+#define MANUAL_Y_HOME_POS -15
+#define MANUAL_Z_HOME_POS 0
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
 //
