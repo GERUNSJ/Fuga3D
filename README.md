@@ -28,7 +28,7 @@ Descripción breve. El resto a la wiki.
         1. Llevar todos los ejes al origen. Esto define los ceros. `Preparar -> Llevar al Origen`.
         2. Levantar el eje Z un poco: `Preparar -> Mover ejes -> Mover Z -> Girar perilla a la derecha`.
         3. Llevar los ejes X e Y al centro de la cama. La secuencia es similar a la anterior.
-        4. Poner un papel debajo del extrusor. `Preparar -> Origen Z`.
+        4. Poner un papel debajo del extrusor. Bajar el carro hasta el origen del eje Z: `Preparar -> Origen Z`.
         5. Verificar que el papel quede relativamente apretado. Debe poder deslizarse con cierta dificultad. En caso contrario se debe ajustar el limite del eje Z (final de carrera). Para hacerlo, ajustar o desajustar el tornillo y repetir puntos `d` y `e`.
         6. Una vez calibrada, llevar al origen los ejes (ver punto 1).
 4. Cargar el `.gcode` en la memoria SD de la impresora.
