@@ -1,7 +1,7 @@
 # Contenido #
 
 1. Cura (3.2.1)
-    1. Descripción de la máquina, guardado como proyecto de Cura. Incluye medidas del espacio de impresión y del _hotend_, y gcodes de inicio y finalización. Al momento de escribir esto (Cura 3.3.1), es la única forma de exportar configuraciones de máquina. [Más acá]()
+    1. Descripción de la máquina, guardado como proyecto de Cura. Incluye medidas del espacio de impresión y del _hotend_, y gcodes de inicio y finalización. Al momento de escribir esto (Cura 3.3.1), es la única forma de exportar configuraciones de máquina. [Más acá](https://github.com/Ultimaker/Cura/issues/3568)
     2. Perfiles de impresión:
         1. PLA 0,2mm
 2. Simplify3D (3.1.1)
