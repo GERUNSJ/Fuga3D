@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Fuga GERUNSJ basado en Prusa i3 MK2 RC4" version="2017-07-08 18:39:11" app="S3D-Software 3.1.1">
+<profile name="Fuga GERUNSJ basado en Prusa i3 MK2 RC4" version="2017-08-14 12:32:27" app="S3D-Software 3.1.1">
   <baseProfile>Prusa Mendel (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>NORMAL 0.2mm</printQuality>
@@ -9,7 +9,7 @@
     <diameter>0.4</diameter>
     <autoWidth>0</autoWidth>
     <width>0.45</width>
-    <extrusionMultiplier>1.1</extrusionMultiplier>
+    <extrusionMultiplier>1.05</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>0.8</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
@@ -60,14 +60,14 @@
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>0</infillExtruder>
-  <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
+  <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
   <infillPercentage>20</infillPercentage>
   <outlineOverlapPercentage>21</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>2</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <infillAngles>0</infillAngles>
+  <infillAngles>45,-45</infillAngles>
   <overlapInfillAngles>0</overlapInfillAngles>
   <generateSupport>1</generateSupport>
   <supportExtruder>0</supportExtruder>
@@ -126,16 +126,16 @@
   <gcodeZoffset>0</gcodeZoffset>
   <overrideMachineDefinition>1</overrideMachineDefinition>
   <machineTypeOverride>0</machineTypeOverride>
-  <strokeXoverride>190</strokeXoverride>
-  <strokeYoverride>190</strokeYoverride>
-  <strokeZoverride>190</strokeZoverride>
-  <originOffsetXoverride>10</originOffsetXoverride>
-  <originOffsetYoverride>10</originOffsetYoverride>
+  <strokeXoverride>175</strokeXoverride>
+  <strokeYoverride>175</strokeYoverride>
+  <strokeZoverride>140</strokeZoverride>
+  <originOffsetXoverride>0</originOffsetXoverride>
+  <originOffsetYoverride>0</originOffsetYoverride>
   <originOffsetZoverride>0</originOffsetZoverride>
   <homeXdirOverride>-1</homeXdirOverride>
   <homeYdirOverride>-1</homeYdirOverride>
   <homeZdirOverride>-1</homeZdirOverride>
-  <flipXoverride>1</flipXoverride>
+  <flipXoverride>-1</flipXoverride>
   <flipYoverride>1</flipYoverride>
   <flipZoverride>1</flipZoverride>
   <toolheadOffsets>0,0|0,0|0,0|0,0|0,0|0,0</toolheadOffsets>
@@ -152,7 +152,7 @@
   <endingGcode>M104 S0 ; turn off temperature,M140 S0 ; turn off heatbed,M107 ; turn off fan,G1 X0 Y200; home X axis,M84 ; disable motors</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
-  <celebrationSong>Random Song</celebrationSong>
+  <celebrationSong>Funky Town</celebrationSong>
   <postProcessing>{REPLACE &quot;; outer perimeter\n&quot; &quot;; outer perimeter\nM204 S600\n&quot;},{REPLACE &quot;; inner perimeter\n&quot; &quot;; inner perimeter\nM204 S1200\n&quot;},{REPLACE &quot;; solid layer\n&quot; &quot;; solid layer\nM204 S1500\n&quot;},{REPLACE &quot;; infill\n&quot; &quot;; infill\nM204 S2000\n&quot;}</postProcessing>
   <defaultSpeed>2400</defaultSpeed>
   <outlineUnderspeed>0.8</outlineUnderspeed>
@@ -187,7 +187,7 @@
   <toolChangeExtraRestartDistance>-0.5</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
   <allowThinWallGapFill>1</allowThinWallGapFill>
-  <thinWallAllowedOverlapPercentage>25</thinWallAllowedOverlapPercentage>
+  <thinWallAllowedOverlapPercentage>35</thinWallAllowedOverlapPercentage>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
     <temperatureController name="Primary Extruder">
@@ -208,7 +208,7 @@
       <setpoint layer="1" temperature="70"/>
       <setpoint layer="2" temperature="60"/>
     </temperatureController>
-    <globalExtrusionMultiplier>1.1</globalExtrusionMultiplier>
+    <globalExtrusionMultiplier>1.05</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
       <setpoint layer="2" speed="100"/>
@@ -269,7 +269,7 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="DETAIL 0.1mm">
     <layerHeight>0.1</layerHeight>
-    <infillPercentage>10</infillPercentage>
+    <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>200</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
     <topSolidLayers>6</topSolidLayers>
@@ -281,7 +281,7 @@
       <diameter>0.4</diameter>
       <autoWidth>0</autoWidth>
       <width>0.4</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
+      <extrusionMultiplier>1.05</extrusionMultiplier>
       <useRetract>1</useRetract>
       <retractionDistance>0.8</retractionDistance>
       <extraRestartDistance>0</extraRestartDistance>
@@ -307,7 +307,7 @@
       <diameter>0.4</diameter>
       <autoWidth>0</autoWidth>
       <width>0.45</width>
-      <extrusionMultiplier>1.1</extrusionMultiplier>
+      <extrusionMultiplier>1.05</extrusionMultiplier>
       <useRetract>1</useRetract>
       <retractionDistance>0.8</retractionDistance>
       <extraRestartDistance>0</extraRestartDistance>
