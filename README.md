@@ -5,7 +5,7 @@ Descripción breve. El resto a la wiki.
 
 ## Acceso rápido
 
-**Estado actual**: Funcionando.
+**Estado actual**: Funcionando. Proximamente será modificada para solucionar los problemas de diseño.
 
 **Configuraciones**
 
@@ -19,8 +19,8 @@ Descripción breve. El resto a la wiki.
 1. Obtener un modelo 3D. El formato habitual es `.stl`.
     1. Fuentes:
         - [Thingiverse](https://www.thingiverse.com/) , [3DWarehouse](https://3dwarehouse.sketchup.com/) o alternativas
-        - ¡Diseñalo! [Autodesk Inventor](https://latinoamerica.autodesk.com/products/inventor/overview) tiene Licencia para estudiantes. Otros: [Freecad](https://www.freecadweb.org/), [Librecad](http://librecad.org), [Sketchup](https://www.sketchup.com/es), [Tinkercad](https://www.tinkercad.com)...
-2. Cargar el archivo `.stl` en un programa _slicer_ para generar un archivo `.gcode`, que es el que tiene las instrucciones para la máquina. Sugerimos [Cura](https://ultimaker.com/en/products/cura-software) o [Slic3r](http://www.prusa3d.com/slic3r-prusa-edition/).
+        - ¡Diseñalo! [Autodesk Inventor](https://latinoamerica.autodesk.com/products/inventor/overview) tiene Licencia para estudiantes. Otros: [Freecad](https://www.freecadweb.org/), [Librecad](http://librecad.org), [Sketchup](https://www.sketchup.com/es), [Tinkercad](https://www.tinkercad.com), [OnShape](https://www.onshape.com/)...
+2. Cargar el archivo `.stl` en un programa _slicer_ para generar un archivo `.gcode`, que es el que tiene las instrucciones para la máquina. Sugerimos [Simplify](https://www.simplify3d.com/)(es pago, pero es el que tiene el mejor archivo de configuración), [Cura](https://ultimaker.com/en/products/cura-software)(libre) o [Slic3r](http://www.prusa3d.com/slic3r-prusa-edition/).
     - La impresora tiene un diseño basado en una Prusa i3, así que nuestros perfiles de impresión (o configuración) están basados en eso. Dichos perfiles se encuentran en este repositorio. `ATENCIÓN: estos perfiles funcionarán bien para modelos simples. Para modelos complejos puede ser necesario cambiar algunos parámetros.`
 3. Prender la impresora con la llave roja que está en la cara derecha, parte inferior. `Para navegar por los menúes, girar la perilla y para seleccionar, oprimirla. Para volver al menú anterior, seleccionar la opción superior.`
 3. Asegurarse de que la impresora está calibrada.
@@ -33,10 +33,10 @@ Descripción breve. El resto a la wiki.
         5. Verificar que el papel quede relativamente apretado. Debe poder deslizarse con cierta dificultad. En caso contrario se debe ajustar el limite del eje Z (final de carrera). Para hacerlo, ajustar (si está muy bajo) o desajustar el tornillo (si está muy alto) y repetir puntos `d` y `e`.
         6. Una vez calibrada, llevar al origen los ejes (ver punto 1).
 4. Cargar el `.gcode` en la memoria SD de la impresora.
-5. Aplicar aerosol fijador sobre la superficie del vidrio. ¿Cuánto? Probá. Si se despega la primera capa, te puede haber faltado.
+5. Aplicar aerosol fijador sobre la superficie del vidrio. ¿Cuánto? Probá, en general solo basta rociar un poco. Si se despega la primera capa, te puede haber faltado.
 6. Imprimir. `Menu de SD -> Seleccionar el archivo a imprimir`. Una vez seleccionado, la cama empezará a calentar, luego calienta la punta (_hotend_) y finalmente comienza la impresión.
 
-_Sugerencia: el proceso de calentar la cama dura unos 10 minutos; puede ser cómodo precalentarla mientras realizamos el proceso de calibración del eje Z y cargamos los archivos en la tarjeta SD. Hay que tener en cuenta que el aerosol debería colocarse con el vidrio frío, así que es lo primero que puede hacerse._
+_Sugerencia: el proceso de calentar la cama dura unos 10 minutos; puede ser cómodo precalentarla mientras realizamos el proceso de calibración del eje Z y cargamos los archivos en la tarjeta SD. Hay que tener en cuenta que el aerosol debería colocarse con el vidrio frío, así que es lo primero que puede hacerse. Para poner a precalentar la cama: `Preparar -> Precalentar PLA -> Precalentar`._
 
 _Si encontrás más problemas, pedí ayuda por Whatsapp. Puede ser bueno documentar los problemas acá en Github; para ello, ir a _Issues_ y _New issue__.
 
@@ -46,11 +46,10 @@ _Si encontrás más problemas, pedí ayuda por Whatsapp. Puede ser bueno documen
 ### Errores de temperatura
 #### Síntomas
 - Carteles de error en la pantalla.
-- La temperatura del _hotend_ no aumenta.
 #### Causas
-- El sensor de temperatura se ha salido del orificio que está en el bloque calentador.
+- Se ha desconectado o está haciendo falso contacto el conector de algunos de los sensores de la temperatura.
 #### Soluciones
-- Asegurarse de que el sensor esté adentro del orificio y que no se salga con el movimiento.
+- Controlar la conección de los conectores, para lo cual hay que sacar la tapa de madera del lado donde están los circuitos.
 
 ---------------------
 
